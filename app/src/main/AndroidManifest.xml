@@ -9,10 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RecipeActivity">
+        <activity android:name=".FoodActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.recipechooser.RecipeActivity">
+                android:value="com.example.recipechooser.FoodActivity">
             </meta-data>
         </activity>
         <activity android:name=".MainActivity">
