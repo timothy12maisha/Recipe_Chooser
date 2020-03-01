@@ -34,16 +34,6 @@
         android:text="Find Food And Recipies"
         android:textColor="@color/colorTextIcons" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/locationEditText"
-        android:background="@color/colorTextIcons"
-        android:layout_above="@+id/findFoodAndRecepiesButton"
-        android:layout_marginBottom="10dp"
-        android:padding="5dp"
-        android:hint="Enter your name"
-        android:layout_centerHorizontal="true" />
     <GridView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

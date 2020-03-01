@@ -3,6 +3,7 @@ package com.example.recipechooser;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,14 +31,12 @@ public class FoodActivity extends AppCompatActivity {
             R.drawable.pic4,
             R.drawable.pic5,
             R.drawable.pic6,
-
     };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food);
-
         GridView gridview =(GridView)findViewById(R.id.baseGridView);
 
         gridview.setAdapter(new ImageAdapter(this));
@@ -48,8 +47,13 @@ public class FoodActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 Toast.makeText(getBaseContext(),
-                        "food" + (position + 1) + " selected",
-                        Toast.LENGTH_SHORT).show();
+                        "Ginger Champagne" + (position + 1) +
+                                "ingredients: " +
+                                "champagne," +
+                                "ginger, " +
+                                "ice, " +
+                                "vodka",
+                        Toast.LENGTH_LONG).show();
             }
         });
 

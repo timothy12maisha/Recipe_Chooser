@@ -3,6 +3,7 @@ package com.example.recipechooser;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -16,8 +17,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public static final String TAG = MainActivity.class.getSimpleName();
     @BindView(R.id.findFoodAndRecepiesButton)
     Button mfindFoodAndRecepiesButton;
-    @BindView(R.id.locationEditText)
-    EditText mLocationEditText;
     @BindView(R.id.appNameTextView)
     TextView mAppNameTextView;
 
@@ -26,6 +25,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/pacifico.ttf");
+
 
         mfindFoodAndRecepiesButton.setOnClickListener(this);
     }
@@ -33,9 +34,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         if (v == mfindFoodAndRecepiesButton) {
-            String location = mLocationEditText.getText().toString();
             Intent intent = new Intent(MainActivity.this, FoodActivity.class);
-            intent.putExtra("location", location);
             startActivity(intent);
         }
     }
