@@ -1,6 +1,7 @@
 package com.example.recipechooser;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
 
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -27,7 +28,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ButterKnife.bind(this);
         Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/pacifico.ttf");
 
-
         mfindFoodAndRecepiesButton.setOnClickListener(this);
     }
 
@@ -38,4 +38,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(intent);
         }
     }
+
 }

@@ -50,4 +50,6 @@ dependencies {
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.0'
     implementation 'com.jakewharton:butterknife:10.2.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.0'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    implementation "androidx.cardview:cardview:1.0.0"
 }

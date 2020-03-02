@@ -1,9 +1,6 @@
 package com.example.recipechooser;
 
-
-import android.app.Activity;
 import android.content.Context;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
 
 public class FoodActivity extends AppCompatActivity {
 
@@ -46,16 +44,17 @@ public class FoodActivity extends AppCompatActivity {
         {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                FragmentManager fm = getSupportFragmentManager();
+                RecipeFragment recipeFragment = new RecipeFragment();
+                recipeFragment.show(fm, "Sample Fragment");
+
 
                 Toast.makeText(getBaseContext(),
-                        "Ginger Champagne" + (position + 1) +
-                                "ingredients: " +
-                                "champagne," +
-                                "ginger," +
-                                "ice," +
-                                "vodka",
-                        Toast.LENGTH_LONG).show();
+                        "Ginger Champagne" + (position + 1) ,
+                        Toast.LENGTH_SHORT).show();
+
             }
+
         });
 
     }

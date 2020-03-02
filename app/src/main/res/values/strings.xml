@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">RecipeChooser</string>
+    <string name="imgdesc">imgdesc</string>
+    <string-array name="ginger_champagne">
+        <item>Champagne</item>
+        <item>Ginger</item>
+        <item>Ice</item>
+        <item>Vodka</item>
+        <item>Neptune</item>
+    </string-array>
 </resources>

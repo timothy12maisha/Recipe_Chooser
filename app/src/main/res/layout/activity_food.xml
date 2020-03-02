@@ -16,8 +16,8 @@
         android:layout_height="wrap_content"
         android:textColor="#FFF"
         android:layout_toRightOf="@+id/image"/>
-    <GridView
 
+    <GridView
         android:id="@+id/baseGridView"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
@@ -27,8 +27,13 @@
         android:verticalSpacing="10dp"
         android:gravity="center"
         android:stretchMode="columnWidth">
-
     </GridView>
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
     <Button
         android:id="@+id/dialogButtonOK"
         android:layout_width="100px"
@@ -36,7 +41,5 @@
         android:text=" Ok "
         android:layout_marginTop="5dp"
         android:layout_marginRight="5dp"
-        android:layout_below="@+id/baseGridView"
-        />
-
+        android:layout_below="@+id/baseGridView" />
 </RelativeLayout>
