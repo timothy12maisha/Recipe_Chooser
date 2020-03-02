@@ -33,6 +33,7 @@ public class FoodActivity extends AppCompatActivity {
             R.drawable.pic6,
     };
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,8 +51,8 @@ public class FoodActivity extends AppCompatActivity {
                         "Ginger Champagne" + (position + 1) +
                                 "ingredients: " +
                                 "champagne," +
-                                "ginger, " +
-                                "ice, " +
+                                "ginger," +
+                                "ice," +
                                 "vodka",
                         Toast.LENGTH_LONG).show();
             }
