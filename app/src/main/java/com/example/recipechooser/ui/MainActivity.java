@@ -13,7 +13,7 @@ import butterknife.ButterKnife;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     public static final String TAG = MainActivity.class.getSimpleName();
 
-    @BindView(R.id.findRestaurantsButton) Button mFindRestaurantsButton;
+    @BindView(R.id.findRecipesButton) Button mFindRecipesButton;
     @BindView(R.id.locationEditText) EditText mLocationEditText;
     @BindView(R.id.appNameTextView) TextView mAppNameTextView;
     //TextView mAppNameTextView;
@@ -22,11 +22,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-        mFindRestaurantsButton.setOnClickListener(this);
+        mFindRecipesButton.setOnClickListener(this);
     }
     @Override
     public void onClick(View v){
-        if(v==mFindRestaurantsButton){
+        if(v==mFindRecipesButton){
             String location = mLocationEditText.getText().toString();
             Intent intent = new Intent(MainActivity.this, FoodListActivity.class);
             intent.putExtra("location", location);
